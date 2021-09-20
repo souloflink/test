@@ -1,12 +1,12 @@
 :root {
-    --nav-font-size: 25px;
+    --nav-font-size: 20px;
     --nav-font-weight: 500;
-    --avatar-title-font-size: 50px;
-    --avatar-subtitle-font-size: 40px;
-    --title-font-size: 35px;
+    --avatar-title-font-size: 35px;
+    --avatar-subtitle-font-size: 30px;
+    --title-font-size: 30px;
     --underline-width: 350px;
     --underline-border: 7px solid #CB0000;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: normal;
 }
 
@@ -80,32 +80,26 @@
 
 .soft-skills__list {
     padding: 0px;
-    width: 266px;
+    width: 189px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.soft-skills__item {
+.soft-skills__item, .hard-skills__item{
     list-style: none; /* Убираем исходные маркеры */
-    background: url(images/li.svg) no-repeat 0 50%/25px 25px; /* Параметры фона */
+    background: url(images/li.svg) no-repeat 0 50%/20px 20px; /* Параметры фона */
     padding-left: 35px; /* Смещаем текст вправо */ 
 }
 
 .hard-skills__list {
     padding: 0px;
-    width: 188px;
+    width: 137px;
     margin-left: auto;
     margin-right: auto;
 }
 
-.hard-skills__item {
-    list-style: none; /* Убираем исходные маркеры */
-    background: url(images/li.svg) no-repeat 0 50%/25px 25px; /* Параметры фона */
-    padding-left: 35px; /* Смещаем текст вправо */ 
-}
-
 .education__wrapper {
-    width: 301px;
+    width: 201px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -141,6 +135,10 @@
         --underline-border: 3px solid #CB0000;
         font-size: 20px;
     }
+    .header__navigation {
+        display: none
+    }
+
     .about-me-text {
         max-width: 70%;
     }
@@ -160,4 +158,48 @@
         background: url(images/li.svg) no-repeat 0 50%/18px 18px; /* Параметры фона */
         padding-left: 35px; /* Смещаем текст вправо */ 
     }
+    .projects__photo-link {
+        display: block;
+        margin: 0px auto;
+        height: 65%;
+        width: 65%;
+    }
 }
+
+@media (max-width: 500px) {
+    .example-of-code__code {
+        margin: 0px;
+        font-size: 15px
+    }
+}
+
+.header__burger {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+  }
+  .header__burger span, .header__burger span:before, .header__burger span:after{
+    width: 100%;
+    position: absolute;
+    height: 10px;
+    background: rgb(255, 255, 255);
+    display: block;
+    transition: .3s;
+    border-radius: 5px;
+  }
+  .header__burger span:before{
+    content: "";
+    top: -20px;
+    transition: top 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .header__burger span{
+    top: 20px;
+  }
+  .header__burger span:after{
+    content: "";
+    bottom: -20px;
+    transition: bottom 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  }

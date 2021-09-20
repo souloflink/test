@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>CV</title>
-    <link rel="stylesheet" href="scripts\styles\atom-one-dark.min.css">
-    <script src="scripts\highlight.min.js"></script>
+    <link rel="stylesheet" href="scripts/styles/atom-one-dark.min.css">
+    <script src="scripts/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
 </head>
 <body class='body'>
@@ -28,6 +28,9 @@
             <a href="" class="header__navigation-link">
                 CODE
             </a>
+        </nav>
+        <nav class="header__burger">
+
         </nav>
     </header>
     <main class="content">
@@ -87,10 +90,10 @@
         <section class="projects">
             <h2 class="projects__title title">PROJECTS</h2>
             <div class="projects__underline underline"></div>
-            <a href="https://vk.cc/c65WZp" class="projects__example">
+            <a href="https://vk.cc/c660bj" class="projects__example">
                 <img src="images/project.svg" alt="project" class='projects__photo-link'>
             </a>
-            <a href="https://vk.cc/c65WZp" class="projects__example">
+            <a href="https://vk.cc/c660bj" class="projects__example">
                 <img src="images/project.svg" alt="project" class='projects__photo-link'>
             </a>
         </section>
@@ -101,9 +104,9 @@
 let n = 10;
 
  nextPrime:
-    for (let i = 2; i <= n; i++) { 
+    for (let i = 2; i &lt= n; i++) { 
 
-    for (let j = 2; j < i; j++) {
+    for (let j = 2; j &lt i; j++) {
          if (i % j == 0) continue nextPrime
      }
 
